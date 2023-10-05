@@ -1,24 +1,24 @@
-import React, { useState } from "react";
-import { IconContext } from "react-icons";
+import React, { useState } from 'react';
+import { FaRProject, FaTimes } from 'react-icons/fa';
+import { CgMenuRight } from 'react-icons/cg';
+import { IconContext } from 'react-icons';
 import {
-  MobileIcon,
-  Nav,
-  NavIcon,
-  NavItem,
-  NavLinks,
-  NavLogo,
-  NavMenu,
-  NavbarContainer,
-} from "./navbarStyles";
-import { CgMenuRight } from "react-icons/cg";
-import { FaTimes } from "react-icons/fa";
-import {  useLocation ,useNavigate } from "react-router-dom";
-import { data } from "../../data/CarouselData";
+	Nav,
+	NavbarContainer,
+	NavLogo,
+	NavIcon,
+	MobileIcon,
+	NavMenu,
+	NavLinks,
+	NavItem,
+} from './NavbarStyles.js';
+import { useLocation, useHistory } from 'react-router-dom';
+import { data } from '../../data/NavbarData';
 
 const Navbar = () => {
-    const [show, setShow] = useState(false);
+	const [show, setShow] = useState(false);
 
-	let history = useNavigate();
+	let history = useHistory();
 	let location = useLocation();
 
 	const handleClick = () => {
@@ -67,6 +67,5 @@ const Navbar = () => {
 		</IconContext.Provider>
 	);
 };
-
 
 export default Navbar;

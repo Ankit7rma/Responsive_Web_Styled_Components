@@ -1,9 +1,8 @@
-import React from 'react'
+import React from 'react';
+import Pricing from '../components/Pricing/Pricing';
 
 const PricingPage = () => {
-  return (
-    <div>PricingPage</div>
-  )
-}
+	return <Pricing />;
+};
 
-export default PricingPage
+export default PricingPage;
